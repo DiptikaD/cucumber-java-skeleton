@@ -1,7 +1,11 @@
 package io.cucumber.skeleton;
 
 public class Belly {
-    public void eat(int cukes) {
 
+    int cukesAte;
+    int hoursWaited;
+
+    public void eat(int cukes) {
+        cukesAte += cukes;
     }
 }
