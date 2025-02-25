@@ -17,14 +17,12 @@ public class StepDefinitions {
     }
 
     @When("I wait {int} hour")
-    public void i_wait_hour(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void i_wait_hour(Integer hours) {
+        belly.wait(hours);
     }
 
     @Then("my belly should growl")
     public void my_belly_should_growl() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        assertThat(belly.shouldGrowl()).isTrue();
     }
 }
